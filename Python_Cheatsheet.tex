@@ -1,0 +1,200 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cheatsheet
+% LaTeX Template
+% Version 1.0 (12/12/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Michael Müller (https://github.com/cmichi/latex-template-collection) with
+% extensive modifications by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % 11pt font size
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[margin=0pt, landscape]{geometry} % Page margins and orientation
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{color} % Required for color customization
+\definecolor{mygray}{gray}{.75} % Custom color
+
+\usepackage{url} % Required for the \url command to easily display URLs
+
+\usepackage{listings}
+
+\usepackage[ % This block contains information used to annotate the PDF
+colorlinks=false, 
+pdftitle={Python Cheatsheet}, 
+pdfauthor={John Smith}, 
+pdfsubject={Compilation of useful shortcuts}, 
+pdfkeywords={Random Software, Cheatsheet}
+]{hyperref}
+
+\setlength{\unitlength}{1mm} % Set the length that numerical units are measured in
+\setlength{\parindent}{0pt} % Stop paragraph indentation
+
+\renewcommand{\dots}{\ \dotfill{}\ } % Fills in the right amount of dots
+
+\newcommand{\command}[2]{#1~\dotfill{}~#2\\} % Custom command for adding a shorcut
+
+\newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} % Custom command for subsection titles
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{picture}(297,210) % Create a container for the page content
+
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION 
+%----------------------------------------------------------------------------------------
+
+\put(10,200){ % Position on the page to put the title
+\begin{minipage}[t]{210mm} % The size and alignment of the title
+\section*{Python Cheatsheet} % Title
+\end{minipage}
+}
+
+%----------------------------------------------------------------------------------------
+%   FIRST COLUMN SPECIFICATION
+%----------------------------------------------------------------------------------------
+
+\put(10,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+
+
+
+\sectiontitle{\underline{STRING MANIPULATION}}
+\\
+\underline{Length}
+\\
+\command{Find length of string}{len(string)}
+\\
+\underline{Finding Characters}
+\\
+\command{Return number of instance of string in string}{word.count("l")}
+\command{Return idx of letter in string}{word.find("l")}
+\command{Return idx of string in string}{word.index(string)}
+\\
+\underline{Split Strings}
+\\
+\command{Split string by a char}{string.split(' ')}
+\\
+\underline{String Repetition}
+\\
+\command{Repeat string 10 times}{print(string*10)}
+\\
+\underline{Replace}
+\\
+\command{Replace string with string}{string.replace(replace this, with this)}
+\\
+\underline{Change String Case}
+\\
+\command{To uppercase}{string.upper()}
+\command{To lowercase}{string.lower()}
+\command{Capitalize first letter of each word}{string.title()}
+\command{Capitalize first char}{string.capitalize()}
+\command{Reverse capitalization}{string.swapcase()}
+\\
+\underline{Reverse String}
+\\
+\command{Reverse String}{''.join(reversed(string))}
+\\
+\underline{Strip String}
+\\
+\command{Remove extra chars from string}{string.strip()}
+
+\end{minipage} % End the first column of text
+} % End the first division of the page
+
+%----------------------------------------------------------------------------------------
+%   SECOND COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(105,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+
+
+\underline{Join Strings}
+\\
+\command{Add string between each char}{":".join(string)}
+\\
+\underline{Testing(returns boolean)}
+\\
+\command{Check if alphanumeric}{string.isalnum()}
+\command{Check if alphabetic}{string.isalpha()}
+\command{Check if contain digits}{string.isdigit()}
+\command{Check if is a title}{string.istitle()}
+\command{Check if uppercase}{string.isupper()}
+\command{Check if lowercase}{string.islower()}
+\command{Check if contains spaces}{string.isspace()}
+\command{Check if ends with string}{string.endswith(string)}
+\command{Check if starts with string}{string.startswith(string)}
+\sectiontitle{\underline{LIST MANIPULATION}}
+\\
+\underline{Sort(alphabetically or numerically)}
+\\
+\command{Sort list by order}{list.sort() OR sorted(list)}
+\\
+\underline{Adding to a list}
+\\
+\command{Append to end of list}{list.append(value)}
+\command{Append to certain idx}{list.insert(idx, value)}
+\command{Add a list to another list}{list.extend(list2)}
+\\
+\underline{Removing elements from list}
+\\
+\command{Remove a certain value}{list.remove(value)}
+\command{Remove value from given idx}{del list[idx]}
+\command{Remove value at idx and return it}{list.pop(idx)}
+\\
+\underline{Count}
+\\
+\command{Return count of val in list}{list.count(value)}
+\command{Test if value is in list}{if val in list:}
+
+\end{minipage} % End the second column of text
+} % End the second division of the page
+
+%----------------------------------------------------------------------------------------
+%   THIRD COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(200,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house tex
+
+\sectiontitle{\underline{RANGE FUNCTION}}
+\begin{itemize}
+  \item{range(stop)}
+  \item{range(start, stop)}
+  \item{range(start, stop, step)}
+\end{itemize}
+
+\sectiontitle{\underline{STANDARD INPUT}}
+\command{Import}{from sys import stdin}
+\command{Redirect input file}{program.py < input.txt}
+\command{Read line}{stdin.readline()}
+\command{Read all lines in file}{stdin.readlines()}
+
+
+
+\end{minipage} % End the third column of text
+} % End the third division of the page
+\end{picture} % End the container for the entire page
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
