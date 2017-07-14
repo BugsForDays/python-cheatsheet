@@ -5,4 +5,8 @@
     </embed>
 </object>
 
-<embed src="https://github.com/BugsForDays/python-cheatsheet/blob/master/Python_Cheatsheet.pdf" width="800px" height="2100px" />
+<embed src="https://github.com/BugsForDays/python-cheatsheet/blob/master/Python_Cheatsheet.pdf" width="800px" height="2100px">
+
+<object data="https://github.com/BugsForDays/python-cheatsheet/blob/master/Python_Cheatsheet.pdf" type="application/pdf" width="300" height="200">
+<a href="https://github.com/BugsForDays/python-cheatsheet/blob/master/Python_Cheatsheet.pdf">test.pdf</a>
+</object>
